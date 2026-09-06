@@ -8,520 +8,557 @@
   <a href="README.pt-BR.md"><strong>Português</strong></a>
 </p>
 
----
+<p align="center">
+  <strong>Crie aplicativos Android. No Android.</strong>
+</p>
 
-# Buildr Studio
+<p align="center">
+  Buildr Studio é um ambiente de desenvolvimento Android mobile-first criado pela <strong>ForgeMatter</strong>.
+</p>
 
-### Desenvolvimento Android. Reinventado para o mobile.
-
-Buildr Studio é um ambiente de desenvolvimento Android mobile-first criado pela **ForgeMatter** para permitir desenvolvimento Android real diretamente em celulares e tablets.
-
-Ele não foi pensado como um simples editor de código nem como um complemento de uma IDE de desktop.
-
-O objetivo é oferecer um ambiente completo onde seja possível criar, editar, analisar, compilar, testar, visualizar, gerenciar e preparar aplicativos Android para distribuição usando um único dispositivo.
-
-> **O Buildr Studio está atualmente em desenvolvimento privado ativo.**
+<p align="center">
+  Criar • Codificar • Compilar • Diagnosticar • Visualizar • Distribuir
+</p>
 
 ---
 
-## Desenvolva aplicativos Android de qualquer lugar
+## O que é o Buildr Studio?
 
-O Buildr leva as partes essenciais de um fluxo moderno de desenvolvimento Android para uma interface criada desde o início para dispositivos móveis.
+O **Buildr Studio** está sendo construído para tornar possível um fluxo sério de desenvolvimento Android diretamente em celulares e tablets.
 
-Crie um projeto.
+Crie projetos Android, edite Kotlin, Java e XML, trabalhe com Gradle e GitHub, execute builds, analise logs e artefatos, diagnostique problemas, use um terminal conectado ao projeto e prepare aplicativos para distribuição — dentro do mesmo ambiente.
 
-Escreva Kotlin ou Java.
+O Buildr nasce pensado para mobile, com uma interface adaptada a toque, telas compactas, teclado e futuras experiências para telas maiores.
 
-Navegue pela estrutura do projeto.
-
-Trabalhe com Git e GitHub.
-
-Execute builds.
-
-Analise erros e diagnósticos.
-
-Use um terminal conectado ao projeto real.
-
-Visualize seu aplicativo.
-
-Prepare releases.
-
-Tudo sem depender de um ambiente tradicional de desktop para o fluxo principal de desenvolvimento.
+> **Status atual:** desenvolvimento privado ativo.  
+> Ainda não há download público.
 
 ---
 
-## O que o Buildr Studio está sendo criado para fazer
+## Estado do produto
 
-### Editor de código
+| Área | Estado |
+|---|---|
+| Workspace de projetos | **Disponível nas builds de desenvolvimento** |
+| Importação de ZIP e GitHub | **Disponível nas builds de desenvolvimento** |
+| Editor consciente do projeto | **Disponível nas builds de desenvolvimento** |
+| Histórico, progresso, logs e artefatos de builds | **Disponível nas builds de desenvolvimento** |
+| Atualização inteligente de projetos | **Disponível nas builds de desenvolvimento** |
+| Conta Buildr e integrações GitHub | **Disponível nas builds de desenvolvimento** |
+| Terminal | **Disponível, em expansão** |
+| Diagnósticos avançados | **Em desenvolvimento ativo** |
+| Runtime do Live View | **Em desenvolvimento ativo** |
+| CLI Buildr | **Em desenvolvimento** |
+| Diagnóstico assistido por IA | **Planejado** |
+| Assistente de Distribuição | **Planejado** |
+| Workspace adaptativo para tablets | **Planejado** |
+| Vitrine Buildr | **Planejado** |
+| Comunidade Buildr | **Planejado** |
 
-Um editor voltado para desenvolvimento real de projetos Android.
+Recursos e interface podem mudar antes da primeira versão pública.
 
-Entre as capacidades planejadas e em evolução estão:
+---
 
-- edição de Kotlin e Java
-- edição de XML e recursos Android
+# Projetos
+
+## Projetos locais e GitHub no mesmo workspace
+
+O Buildr possui uma área dedicada ao gerenciamento de projetos Android.
+
+Os fluxos incluem:
+
+- criação e abertura de projetos Android
+- importação de ZIP
+- importação do GitHub
+- clonagem de repositórios
+- múltiplos projetos no mesmo workspace
+- configuração de build por projeto
+- estado consciente de Git
+- ações contextuais
+- persistência do workspace
+
+O Buildr também pode reconhecer quando um ZIP importado pertence a um projeto já existente e utilizar um fluxo de atualização mais seguro em vez de simplesmente criar outra cópia.
+
+<p align="center">
+  <img src="assets/screenshots/pt-BR/01-projects.png" alt="Projetos no Buildr Studio" width="420">
+</p>
+
+---
+
+# Editor
+
+## Um editor consciente do projeto Android
+
+O Editor do Buildr foi desenvolvido em torno de projetos Android reais, e não de arquivos de texto isolados.
+
+Entre os recursos atuais e em evolução estão:
+
+- Kotlin
+- Java
+- XML Android
 - destaque de sintaxe
 - números de linha
-- múltiplos arquivos abertos
-- árvore de arquivos do projeto
+- abas de arquivos
+- árvore do projeto
+- criação e gerenciamento de arquivos
 - busca e substituição
 - desfazer e refazer
 - salvamento automático
-- navegação rápida entre arquivos e símbolos
-- diagnósticos por arquivo e linha
-- marcadores de erros e warnings diretamente no editor
-- Quick Fix quando houver uma correção segura
-- navegação otimizada para arquivos extensos
-- persistência do estado do projeto e do editor
-- painel de arquivos adaptativo para celulares e telas maiores
+- contexto Git
+- estado do Gradle
+- persistência do Editor
+- sidebar adaptativa
+- navegação em arquivos extensos
 
-O objetivo é aproximar progressivamente a experiência do que desenvolvedores esperam de uma IDE real.
+Editor, Terminal e ferramentas de projeto trabalham sobre o mesmo workspace.
 
----
+Alterações feitas em uma parte do Buildr devem refletir imediatamente no restante do ambiente.
 
-## Diagnósticos em tempo real
-
-O Buildr está sendo desenvolvido para detectar problemas antes da compilação sempre que possível.
-
-Os diagnósticos podem incluir:
-
-- erros Kotlin
-- erros Java
-- problemas de sintaxe XML
-- erros no AndroidManifest
-- problemas de configuração Gradle
-- arquivos obrigatórios ausentes ou inválidos
-- dependências ou configurações inválidas
-- warnings
-- diagnósticos informativos
-
-Erros e warnings devem aparecer em diferentes pontos da interface:
-
-- diretamente na linha afetada
-- no gutter do editor
-- na barra de status
-- no painel Problemas/Diagnóstico
-- nos detalhes de build quando forem relevantes
-
-Sempre que possível, o Buildr também deverá levar diretamente ao arquivo e à linha afetados.
+<p align="center">
+  <img src="assets/screenshots/pt-BR/02-editor.png" alt="Editor do Buildr Studio" width="420">
+</p>
 
 ---
 
-## Compreensão de Android e Gradle
+# Builds
 
-O Buildr não está sendo desenvolvido como um simples editor de texto.
+## Compile, acompanhe e entenda o que aconteceu
 
-O modelo de projeto é projetado para compreender informações específicas do Android, incluindo:
+O Buildr conecta o workspace à infraestrutura de compilação Android e mantém o estado das builds visível dentro do aplicativo.
 
-- módulos
-- applicationId e namespace
-- configuração do AndroidManifest
-- estrutura Gradle
-- variantes e tasks
-- configuração de SDK
-- dependências
-- Activities de inicialização
-- configuração de build
-- informações de versão do projeto
+A experiência inclui:
 
-O estado do Gradle e os diagnósticos do projeto devem permanecer sincronizados com o workspace automaticamente.
-
----
-
-## Builds
-
-O Buildr pode iniciar e acompanhar compilações Android mantendo o ambiente de desenvolvimento separado da infraestrutura que executa a build.
-
-A experiência de build está sendo desenvolvida com:
-
-- preflight antes da compilação
 - confirmação explícita
-- progresso da build
-- estados de fila e execução
-- histórico
-- etapas detalhadas
+- estado em fila e em execução
+- progresso
+- etapa atual
 - duração
-- artefatos resultantes
-- logs completos
-- extração do erro real do compilador
-- navegação direta do erro para o Editor
-- acompanhamento de builds em segundo plano
-- notificações de mudanças importantes de estado
+- histórico
+- sucesso, falha e cancelamento
+- informações de projeto e versão
+- descoberta de artefatos
+- detalhes da execução
+- logs
+- reconciliação de estado em segundo plano
 
-Sempre que possível, o Buildr deve identificar o erro real do compilador em vez de mostrar apenas mensagens genéricas de falha do Gradle.
+Uma build remota foi projetada para continuar independentemente da tela atual do Buildr.
 
----
+Ao retornar ao aplicativo, o estado real da execução pode ser reconciliado em vez de depender apenas da interface local anterior.
 
-## Compilação rápida pelo projeto
-
-Projetos que já possuem uma configuração válida poderão iniciar uma build diretamente pelo menu contextual da área Projetos.
-
-Antes de iniciar, o Buildr poderá executar um preflight e identificar bloqueios como:
-
-- Gradle inválido
-- arquivos ausentes
-- Manifest inválido
-- integração GitHub indisponível
-- alterações locais relevantes ainda não sincronizadas
-- configuração de build ausente
-- diagnósticos críticos
-
-Caso alguma intervenção seja necessária, o Buildr deve informar claramente o problema e levar o usuário ao local correto para resolvê-lo.
+<p align="center">
+  <img src="assets/screenshots/pt-BR/03-builds.png" alt="Builds no Buildr Studio" width="420">
+</p>
 
 ---
 
-## Terminal integrado
+# Detalhes da build
 
-O Terminal do Buildr Studio está sendo desenvolvido como uma ferramenta de primeira classe conectada ao mesmo workspace real utilizado pelo Editor.
+## Mais do que um check verde
 
-O Terminal está planejado para oferecer:
+Uma build concluída deve informar o que realmente aconteceu.
 
-- sessões persistentes
-- múltiplas sessões
-- histórico de comandos
-- autocomplete
-- operações de arquivos
-- fluxos Git
-- links clicáveis no formato `arquivo:linha`
-- acesso às ferramentas disponíveis no ambiente
-- interação com os mesmos arquivos usados pelo Editor
-
-Alterações feitas no Terminal devem refletir imediatamente em:
-
-- Editor
-- árvore de arquivos
-- diagnósticos
-- estado do Git
-- análise do projeto
-
----
-
-## CLI Buildr
-
-Uma CLI própria chamada `buildr` está planejada para expor capacidades do Buildr diretamente pelo Terminal.
-
-Entre os comandos planejados estão operações como:
-
-- `buildr project`
-- `buildr analyze`
-- `buildr problems`
-- `buildr sync`
-- `buildr build`
-- `buildr status`
-- `buildr logs`
-- `buildr artifact`
-- `buildr git`
-
-A CLI e a interface gráfica devem operar sobre o mesmo estado do projeto, e não como ambientes separados.
-
----
-
-## Git e GitHub
-
-O GitHub é parte central do fluxo do Buildr.
-
-O aplicativo está sendo desenvolvido para oferecer:
-
-- importação de projetos do GitHub
-- sincronização de repositórios
-- branches
-- commits
-- atualização de projetos
-- integração com builds
-- status Git
-- consciência do estado remoto
-- fluxos apoiados por GitHub Actions quando aplicável
-
-O indicador GitHub do Buildr representa o estado real da sincronização e não apenas uma conexão visual.
-
----
-
-## Atualização inteligente de projetos
-
-Ao importar um ZIP pertencente a um projeto que já existe no Buildr, o aplicativo pode identificar essa relação em vez de simplesmente criar uma duplicata.
-
-O fluxo de atualização foi projetado para:
-
-- identificar o projeto existente
-- comparar a identidade do projeto
-- mostrar arquivos adicionados
-- mostrar arquivos alterados
-- mostrar arquivos removidos
-- criar um snapshot de segurança
-- atualizar o projeto existente
-- permitir rollback em caso de falha
-- permitir importar como uma cópia separada
-
-O objetivo é tornar a evolução do projeto mais segura sem obrigar o usuário a substituir manualmente pastas completas.
-
----
-
-## Live View
-
-O Live View está sendo desenvolvido como um sistema real de visualização do aplicativo.
-
-O objetivo não é gerar uma representação visual falsa ou aproximada da aplicação.
-
-O Buildr e seu Preview Host dedicado estão sendo desenvolvidos para:
-
-- identificar a configuração real de inicialização do projeto
-- estabelecer um runtime isolado de preview
-- exibir o aplicativo em uma superfície dedicada
-- reagir a alterações do projeto
-- preservar a fidelidade da aplicação real
-
-O Preview Host é um componente complementar distribuído junto de versões compatíveis do Buildr Studio.
-
-O Live View continua em desenvolvimento ativo.
-
----
-
-## Gerenciamento de projetos
-
-O Buildr oferece um workspace unificado para projetos locais e projetos vinculados ao GitHub.
-
-Os fluxos de projeto estão sendo desenvolvidos para incluir:
-
-- criação de novos projetos Android
-- importação de ZIP
-- importação do GitHub
-- identificação de projetos
-- detecção de atualizações
-- duplicação de projetos
-- ações contextuais
-- configuração de build por projeto
-- persistência do estado do workspace
-
----
-
-## Detalhes de build e artefatos
-
-Uma build concluída deve oferecer muito mais do que apenas um indicador verde de sucesso.
-
-O Buildr está sendo desenvolvido para apresentar:
+O Buildr pode apresentar:
 
 - versão compilada
 - versão anterior
-- variante
 - task
+- variante
 - duração
-- etapas individuais da compilação
-- informações do artefato gerado
-- logs completos
-- diagnósticos relevantes do compilador
-- opções de salvar e compartilhar quando apropriado
+- etapas concluídas
+- artefato gerado
+- ações para salvar e compartilhar
+- log completo
+- diagnósticos do compilador quando disponíveis
+
+O pipeline de diagnóstico está evoluindo para encontrar o erro concreto do compilador — incluindo arquivo, linha e coluna — e fornecer um caminho direto de volta ao Editor.
+
+<p align="center">
+  <img src="assets/screenshots/pt-BR/04-build-details.png" alt="Detalhes da build no Buildr Studio" width="420">
+</p>
 
 ---
 
-## Desenvolvimento assistido por IA
+# Diagnósticos
 
-O Buildr Studio está planejado para possuir uma camada de assistência por IA voltada ao desenvolvimento e aos diagnósticos.
+## Encontre o problema real
 
-Quando houver contexto técnico suficiente, o Buildr poderá oferecer ações como:
+O Buildr está evoluindo para um sistema de diagnóstico no nível de uma IDE.
 
-- explicar um erro de build
+O sistema está sendo desenvolvido para oferecer:
+
+- erros
+- warnings
+- diagnósticos informativos
+- arquivo
+- linha e coluna
+- marcadores no gutter
+- realce inline
+- contadores de status
+- telas de Problemas / Diagnóstico
+- navegação direta ao código afetado
+- Quick Fix seguro quando apropriado
+
+A análise Android inclui:
+
+- Kotlin
+- Java
+- XML
+- AndroidManifest
+- Gradle
+- configuração do projeto
+
+O objetivo é ultrapassar mensagens genéricas como `Compilation failed` e mostrar o problema real sempre que o compilador fornecer informações suficientes.
+
+---
+
+# Inteligência Android e Gradle
+
+O Buildr compreende a estrutura de um projeto Android em vez de tratá-lo como uma pasta genérica.
+
+Seu modelo de projeto é desenvolvido em torno de informações como:
+
+- módulos
+- estrutura Gradle
+- `applicationId`
+- namespace
+- AndroidManifest
+- Activity de inicialização
+- SDK
+- dependências
+- variantes
+- tasks
+- versão
+- estrutura de código
+- configuração de build
+
+Mudanças relevantes em Gradle ou Manifest podem invalidar e atualizar o estado relacionado do projeto.
+
+---
+
+# Atualização inteligente de projetos
+
+Quando um ZIP importado representa uma versão mais nova de um projeto já existente, o Buildr pode:
+
+- identificar o projeto
+- comparar sua identidade
+- mostrar arquivos adicionados
+- mostrar arquivos modificados
+- mostrar arquivos removidos
+- criar snapshot de segurança
+- atualizar o workspace existente
+- realizar rollback quando necessário
+- importar como cópia separada quando solicitado
+
+O objetivo é tornar a evolução do projeto mais segura sem exigir substituição manual de pastas completas.
+
+---
+
+# Terminal
+
+## O mesmo workspace pela linha de comando
+
+O Terminal do Buildr opera sobre o mesmo workspace utilizado pela interface gráfica.
+
+Ele está sendo expandido em direção a:
+
+- sessões persistentes
+- múltiplas sessões
+- histórico
+- autocomplete
+- operações de arquivos
+- fluxos Git
+- comandos de projeto
+- referências clicáveis `arquivo:linha`
+- diretório de trabalho persistente
+- estado compartilhado com o Editor e ferramentas de projeto
+
+<p align="center">
+  <img src="assets/screenshots/pt-BR/05-terminal-current.png" alt="Terminal do Buildr Studio" width="420">
+</p>
+
+---
+
+# CLI Buildr
+
+Uma CLI própria chamada `buildr` está sendo desenvolvida para expor funções da IDE diretamente pelo Terminal.
+
+Entre as famílias de comandos planejadas:
+
+```text
+buildr project
+buildr analyze
+buildr problems
+buildr sync
+buildr build
+buildr status
+buildr logs
+buildr artifact
+buildr git
+```
+
+CLI e interface gráfica devem utilizar o mesmo estado do projeto e os mesmos motores internos.
+
+---
+
+# Conta Buildr e GitHub
+
+O GitHub é parte central do fluxo do Buildr.
+
+O Buildr também utiliza uma camada própria de conta para identidade, integrações e futuros recursos do ecossistema.
+
+O modelo inclui:
+
+- Conta Buildr
+- estado da conexão GitHub
+- instalação do GitHub App
+- repositórios autorizados
+- importação de projetos
+- sincronização
+- fluxos conscientes do repositório
+- integração com builds
+- futuros recursos vinculados à Conta Buildr
+
+<p align="center">
+  <img src="assets/screenshots/pt-BR/06-account-integrations.png" alt="Conta Buildr e integrações GitHub" width="420">
+</p>
+
+---
+
+# Build rápida
+
+Projetos com uma configuração de build válida poderão oferecer uma ação **Compilar agora** diretamente na área Projetos.
+
+Antes de iniciar, o Buildr poderá executar um preflight curto e identificar bloqueios como:
+
+- erro no Gradle
+- Manifest inválido
+- arquivos ausentes
+- GitHub indisponível
+- task ou variante inválida
+- diagnósticos críticos
+- estado inconsistente do projeto
+
+Em vez de simplesmente recusar a compilação, o Buildr deverá informar o que precisa de atenção e onde resolver.
+
+---
+
+# Live View
+
+## Veja o que está construindo
+
+O **Live View está atualmente em desenvolvimento ativo**.
+
+O objetivo é visualizar o runtime real do aplicativo Android em vez de apresentar uma aproximação fabricada da interface.
+
+O Buildr e o **Buildr Preview Host** estão sendo desenvolvidos para:
+
+- resolver a configuração real de inicialização
+- identificar módulo e launcher
+- estabelecer um runtime isolado de preview
+- anexar a superfície ao Buildr
+- gerenciar tamanho e ciclo de vida
+- reagir às alterações do projeto
+
+O Preview Host foi projetado para ser distribuído junto com versões compatíveis do Buildr Studio.
+
+Um screenshot público será adicionado quando o runtime real do projeto estiver pronto para apresentação.
+
+---
+
+# Desenvolvimento assistido por IA
+
+Diagnósticos assistidos por IA estão planejados como uma camada opcional de desenvolvimento.
+
+Quando houver contexto técnico suficiente, o Buildr deverá auxiliar em tarefas como:
+
+- explicar falhas de build
 - analisar diagnósticos do compilador
 - identificar causas prováveis
-- sugerir alterações no código
-- gerar um patch proposto
 - explicar problemas de Gradle
-- auxiliar na configuração do projeto
+- propor correções
+- gerar um patch sugerido
 
-Alterações geradas pela IA não devem ser aplicadas silenciosamente.
+Alterações geradas por IA não deverão ser aplicadas silenciosamente.
 
-Quando houver uma modificação de código proposta, o Buildr deverá mostrar a mudança e exigir aprovação explícita antes de aplicá-la.
-
----
-
-## Mobile first
-
-A experiência em celular está sendo projetada para ser autossuficiente.
-
-As funcionalidades essenciais não dependerão de um tablet.
-
-Em telas compactas, o Buildr utiliza superfícies dedicadas para ferramentas como:
-
-- Editor
-- Terminal
-- Projetos
-- Builds
-- Home
-
-Painéis e ferramentas contextuais se adaptam ao espaço disponível.
+Mudanças propostas deverão permanecer visíveis e exigir aprovação explícita do usuário.
 
 ---
 
-## Também pensado para tablets
+# Assistente de Distribuição
 
-Telas maiores deverão permitir um workspace mais rico sem criar um produto separado.
+Um futuro **Assistente de Distribuição** está planejado para ajudar desenvolvedores a preparar aplicativos Android para distribuição externa.
 
-Em tablets, o Buildr está planejado para oferecer layouts como:
-
-- árvore de arquivos persistente
-- Editor e Terminal simultâneos
-- Terminal dockado
-- painéis de Problemas e saída
-- Live View ao lado das ferramentas de desenvolvimento
-- painéis redimensionáveis
-- workspace multipainel
-- interações otimizadas para teclado e mouse
-
-O mesmo projeto, sessão e estado do Terminal devem acompanhar a transição entre layouts compactos e expandidos.
-
----
-
-## Vitrine Buildr
-
-Uma futura **Vitrine Buildr** está planejada como um catálogo público de aplicativos criados com o Buildr Studio.
-
-Desenvolvedores poderão apresentar seus aplicativos com informações como:
-
-- nome do aplicativo
-- descrição
-- imagens
-- informações de release
-- versão
-- informações do desenvolvedor
-- links oficiais de distribuição
-
-A Vitrine não será um serviço de hospedagem de APKs.
-
-Cada aplicativo direcionará o usuário para os canais oficiais de distribuição definidos por seu desenvolvedor.
-
-Também está planejada uma área **Minha Vitrine** vinculada à Conta Buildr.
-
----
-
-## Comunidade Buildr
-
-Uma experiência dedicada de **Comunidade Buildr** está planejada como parte do ecossistema ForgeMatter.
-
-O objetivo é criar um espaço onde usuários do Buildr possam:
-
-- descobrir projetos
-- trocar conhecimento
-- discutir desenvolvimento Android
-- compartilhar fluxos de trabalho
-- ajudar outros usuários
-- encontrar recursos da comunidade
-- acompanhar novidades do ecossistema Buildr
-
-A primeira experiência da comunidade poderá utilizar o GitHub antes de evoluir para uma integração mais profunda com o Buildr.
-
----
-
-## Assistente de Distribuição
-
-O Buildr está planejado para ajudar desenvolvedores a preparar aplicativos Android para distribuição.
-
-O Assistente de Distribuição deverá auxiliar em tarefas como:
+O fluxo deverá auxiliar em:
 
 - configuração de release
 - preparação de versão
-- configuração de assinatura
-- validação da release
-- preparação de artefatos
-- verificações de prontidão para distribuição
+- assinatura
+- validação de artefatos
+- verificações de release
+- prontidão para distribuição
 
-O próprio Buildr Studio **não está planejado para distribuição pela Google Play**.
+**O próprio Buildr Studio não está planejado para distribuição pela Google Play.**
 
-Downloads e disponibilidade oficiais do Buildr serão oferecidos por canais controlados pela ForgeMatter.
-
----
-
-## Buildr Preview Host
-
-Algumas capacidades avançadas de preview utilizam um componente dedicado chamado Buildr Preview Host.
-
-Versões compatíveis do Host devem ser distribuídas junto com o Buildr Studio, sem exigir que o usuário faça download ou compilação manual de outro componente.
-
-O Buildr verifica a compatibilidade antes de utilizar o Host.
+Downloads e releases oficiais do Buildr serão distribuídos através de canais controlados pela ForgeMatter.
 
 ---
 
-## Segurança por arquitetura
+# Mobile first
 
-O Buildr está sendo desenvolvido partindo do princípio de que qualquer aplicativo Android distribuído pode ser analisado ou submetido a engenharia reversa.
+O Buildr começa pela experiência no celular.
 
-Por isso, decisões críticas de segurança e autorização não devem depender de esconder lógica dentro do APK.
+As ferramentas essenciais são projetadas para permanecer úteis em telas compactas através de áreas próprias como:
 
-A arquitetura está sendo desenvolvida em torno de princípios como:
+- Home
+- Projetos
+- Editor
+- Builds
+- Terminal
 
-- autorização server-side
-- credenciais curtas e revogáveis
-- tratamento seguro de tokens
-- proteção de dados locais sensíveis
-- exposição mínima de segredos
-- verificações de integridade quando apropriado
-- separação entre cliente e infraestrutura privilegiada
+A proposta é que o celular permaneça um ambiente de desenvolvimento de primeira classe, e não apenas um controle remoto para uma IDE de desktop.
 
 ---
 
-## O que vem pela frente
+# Workspace para tablets
 
-O Buildr Studio continua evoluindo.
+Um workspace adaptativo mais rico está planejado para tablets e telas maiores.
 
-Algumas funcionalidades mostradas ou descritas neste repositório podem estar:
+A experiência expandida deverá permitir combinações como:
 
-- já implementadas
-- parcialmente implementadas
-- em desenvolvimento ativo
-- planejadas para versões futuras
+- árvore de arquivos persistente
+- Editor + Terminal
+- Terminal dockado
+- painel Problemas
+- saída de build
+- Live View ao lado do Editor
+- painéis redimensionáveis
+- desenvolvimento multipainel
+- interações otimizadas para teclado e mouse
 
-A experiência pública continuará mudando conforme o Buildr se aproxima de suas primeiras versões abertas.
-
----
-
-## Testes beta
-
-Uma beta pública poderá ser disponibilizada antes da versão estável.
-
-Builds beta poderão ser publicadas como pre-releases controladas e poderão ser substituídas ou retiradas conforme o desenvolvimento avançar.
-
-Versões beta podem conter recursos incompletos, limitações de compatibilidade e problemas conhecidos.
-
-A disponibilidade oficial de qualquer beta será sempre anunciada pelos canais controlados pela ForgeMatter.
+Projeto, sessão do Terminal e contexto de desenvolvimento devem continuar os mesmos entre layouts compactos e expandidos.
 
 ---
 
-## Status de lançamento
+# Vitrine Buildr
 
-**Status atual:** Desenvolvimento privado
+## Aplicativos feitos com Buildr
 
-**Download público:** Ainda indisponível
+Uma futura **Vitrine Buildr** está planejada como catálogo visual de aplicativos criados com o Buildr Studio.
 
-**Beta pública:** Planejada / em avaliação
+Desenvolvedores poderão apresentar seus aplicativos com informações como:
 
-**Versão estável:** A anunciar
+- nome
+- descrição
+- screenshots
+- versão
+- informações de release
+- desenvolvedor
+- links oficiais de distribuição
+
+A Vitrine **não será um serviço de hospedagem de APKs**.
+
+Cada aplicativo apontará para canais oficiais escolhidos pelo próprio desenvolvedor.
+
+Uma futura área **Minha Vitrine** também está planejada para Contas Buildr.
 
 ---
 
-## Sobre a ForgeMatter
+# Comunidade Buildr
 
-A ForgeMatter é um estúdio independente de software focado em criar ferramentas ambiciosas para desenvolvedores e criadores.
+Uma futura **Comunidade Buildr** está planejada como parte do ecossistema ForgeMatter.
+
+O objetivo é criar um espaço onde desenvolvedores possam:
+
+- descobrir projetos
+- trocar conhecimento sobre desenvolvimento Android
+- compartilhar fluxos de trabalho
+- ajudar outros usuários
+- encontrar recursos
+- acompanhar novidades do ecossistema Buildr
+
+A primeira experiência poderá utilizar o GitHub antes de evoluir para uma integração mais profunda dentro do Buildr.
+
+---
+
+# Ecossistema Buildr
+
+### Buildr Studio
+O ambiente de desenvolvimento Android mobile-first.
+
+### Buildr Preview Host
+O componente de runtime utilizado pelas capacidades avançadas de preview.
+
+### Buildr CLI
+Acesso pelo Terminal às operações de projeto e desenvolvimento.
+
+### Vitrine Buildr
+O futuro catálogo de aplicativos criados com Buildr.
+
+### Comunidade Buildr
+O futuro espaço para desenvolvedores e para o ecossistema.
+
+---
+
+# Beta e releases
+
+Uma beta pública está em avaliação e poderá ser lançada antes da primeira versão estável.
+
+Builds beta poderão ser distribuídas como **pre-releases controladas** e poderão ser substituídas ou retiradas conforme o desenvolvimento avançar.
+
+Uma beta poderá conter:
+
+- recursos inacabados
+- limitações de compatibilidade
+- problemas conhecidos
+- funcionalidades experimentais
+
+A remoção de uma release beta não revoga cópias que já tenham sido baixadas.
+
+Downloads oficiais e informações de release serão publicados através de canais controlados pela ForgeMatter.
+
+---
+
+# Status atual de lançamento
+
+| | |
+|---|---|
+| **Desenvolvimento** | Privado |
+| **Download público** | Ainda indisponível |
+| **Beta pública** | Em avaliação |
+| **Versão estável** | A anunciar |
+| **Plataforma** | Android |
+| **Desenvolvedor** | ForgeMatter |
+
+---
+
+# Sobre a ForgeMatter
+
+**ForgeMatter** é um estúdio independente de software focado em criar ferramentas ambiciosas para desenvolvedores e criadores.
 
 **Buildr Studio é um produto ForgeMatter.**
 
 ---
 
-## Propósito deste repositório
+# Sobre este repositório
 
 Este é o repositório público informativo oficial do Buildr Studio.
 
-Ele será utilizado para:
+Ele poderá ser utilizado para:
 
 - informações sobre o produto
-- status de desenvolvimento
-- anúncios públicos
-- informações sobre beta
-- informações de releases
-- links oficiais do Buildr Studio
+- screenshots
+- atualizações de desenvolvimento
+- anúncios de beta
+- releases públicas
+- notas de versão
+- downloads oficiais
+- novidades do ecossistema Buildr
 
 O código-fonte e a infraestrutura interna do Buildr Studio são mantidos separadamente.
 
 ---
 
-## Licenciamento
+# Licenciamento
 
 Buildr Studio é um software proprietário.
 
